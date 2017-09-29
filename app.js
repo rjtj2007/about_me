@@ -20,62 +20,76 @@
 
 'use strict';
 
-var name = prompt('Is my name Ryan?').toLowerCase();
+var userPoints = 0;
+
+var user = prompt('Hi there. What\'s your name?');
+  alert('Welcome ' + user + ' let\'s play a game.');
+  console.log('User name is: ' + user);
+
+var name = prompt(user + ' is my name Ryan?').toLowerCase();
 if (name === 'yes') {
-  alert('YUP! You got it!');
-  console.log('User stated: ' + name);
+  userPoints++;
+  alert('YUP! You got it!' + userPoints);
+  console.log('Name question user stated: ' + name);
 } else if (name === 'no') {
-  alert('No it\'s not Brian, it\'s RYAN!');
-  console.log('User stated: ' + name);
+  alert('No it\'s not BRIAN, it\'s Ryan!');
+  console.log('Name question user stated: ' + name);
 } else {
   alert ('Please answer with "yes" or "no"');
-  console.log('User stated: ' + name);
+  console.log('Name question user stated: ' + name);
 }
 
-var siblings = prompt('Do I have 2 siblings?').toLowerCase();
+var siblings = prompt('Do I have siblings?').toLowerCase();
 if (siblings === 'yes') {
-  alert('Yes indeed, a younger brother and older sister');
-  console.log('siblings question user stated ' + siblings);
-} else if {
-  ('Do I look like an only child? Sorry.');
-  console.log('siblings question user stated ' + siblings);
+  userPoints++;
+  alert('Yes indeed ' + user + ', a younger brother and older sister' + userPoints);
+  console.log('Siblings question user stated: ' + siblings);
+} else if (siblings === 'no') {
+  ('Do I look like an only child' + user + '? Sorry, I have 2 siblings actually.');
+  console.log('Siblings question user stated: ' + siblings);
 } else {
   alert ('Please answer with \'yes\' or \'no\'');
-  console.log('siblings question user stated ' + siblings);
+  console.log('Siblings question user stated: ' + siblings);
 }
 
-var home = prompt('Did I grow up in Canada?').toLowerCase();
-if (home === 'yes') {
-  alert('Sorry, I\'m a Washintionian, born and raised');
-  console.log('home question user stated ' + home);
-} else if {
-  alert('Correct, I like Canada but I\'m from here');
-  console.log('home question user stated ' + home);
+var home = prompt('How many States have I called HOME?').toLowerCase();
+if (home === 4) {
+  userPoints++;
+  alert('WOW, that\'s amazing! I have lived in Washington, Oregon, Colorado and Alaska.' + userPoints);
+  console.log('home question user stated: ' + home);
+} else if (home !== 4) {
+  alert('Sorry, 4 is the correct answer. Washington, Oregon, Colorado and Alaska.');
+  console.log('Home question user stated: ' + home);
 } else {
-  alert ('Please answer with \'yes\' or \'no\'');
-  console.log('home question user stated ' + home);
+  alert ('Sorry, that\'s not a number');
+  console.log('Home question user stated: ' + home);
 }
 
-var cat = prompt('Do I have a Cat?').toLowerCase();
+var cat = prompt('Very important question ' + user + '. Do I have a Cat?').toLowerCase();
 if (cat === 'yes') {
-  alert('yes, her name is Lucy and she is 6 year\'s old');
-  console.log('cat question user stated ' + cat);
-} else if {
+  userPoints++;
+  alert('Correct, her name is Lucy and she is 7 year\'s old' + userPoints);
+  console.log('Cat question user stated: ' + cat);
+} else if (cat === 'no'){
   alert('Sorry, I am indeed a cat person');
-  console.log('cat question user stated ' + cat);
+  console.log('Cat question user stated: ' + cat);
 } else {
   alert ('Please answer with \'yes\' or \'no\'');
-  console.log('cat question user stated ' + cat);
+  console.log('Cat question user stated: ' + cat);
 }
 
-var hair = prompt('Do I have hair').toLowerCase();
+var hair = prompt('Now look closly and answer honestly ' + user + '. Do I have hair?').toLowerCase();
 if (hair === 'yes') {
-  alert('I should take my hat off more!');
-  console.log('hair question ' + hair);
-} else if {
-  alert('Nope, My wife calls be the tall, skinny, bald guy!');
-  console.log('hair question user stated ' + hair);
+  userPoints++;
+  alert('I should take my hat off more often!' + userPoints);
+  console.log('Hair question: ' + hair);
+} else if (hair === 'yes') {
+  userPoints++;
+  alert('You\'re right! My wife calls be the tall, skinny, bald guy!' + userPoints);
+  console.log('Hair question user stated: ' + hair);
 } else {
   alert ('Please answer with \'yes\' or \'no\'');
-  console.log('hair question user stated ' + hair);
+  console.log('hair question user stated: ' + hair);
 }
+
+alert('Thanks for playing ' + user + '. You have ' + userPoints + '. Hope you learned something about me.');
