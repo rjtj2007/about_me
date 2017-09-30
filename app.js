@@ -9,10 +9,11 @@ var user = prompt('What\'s your name?');
 while (!user) {
   user = prompt('Sorry, I didn\'n catch that. What was your name??');
 }
-//user name collected, move forward into the game
-alert('Welcome ' + user + ' let\'s play a game.');
-console.log('User name is: ' + user);
 //
+// //user name collected, move forward into the game
+// alert('Welcome ' + user + ' let\'s play a game.');
+// console.log('User name is: ' + user);
+////Question 1: name
 // var name = prompt(user + ', is my name Ryan?').toLowerCase();
 // if (name === 'yes' || 'y') {
 //   userPoints++;
@@ -26,6 +27,7 @@ console.log('User name is: ' + user);
 //   console.log('Name question user stated: ' + name);
 // }
 //
+////Question 2: siblings
 // var siblings = prompt('Do I have siblings?').toLowerCase();
 // if (siblings === 'yes' || 'y') {
 //   userPoints++;
@@ -39,6 +41,7 @@ console.log('User name is: ' + user);
 //   console.log('Siblings question user stated: ' + siblings);
 // }
 //
+////Question 3: home
 // var home = prompt('How many States have I called HOME?');
 // home = parseInt(home);
 // if (home === 4) {
@@ -50,6 +53,7 @@ console.log('User name is: ' + user);
 //   console.log('Home question user stated: ' + home);
 // }
 //
+////Question 4: cat
 // var cat = prompt('Very important question ' + user + '. Do I have a Cat?').toLowerCase();
 // if (cat === 'yes' || 'y') {
 //   userPoints++;
@@ -63,6 +67,7 @@ console.log('User name is: ' + user);
 //   console.log('Cat question user stated: ' + cat);
 // }
 //
+////Question 5: hair
 // var hair = prompt('Now look closly and answer honestly ' + user + '. Do I have hair?').toLowerCase();
 // if (hair === 'no' || 'n') {
 //   userPoints++;
@@ -76,28 +81,48 @@ console.log('User name is: ' + user);
 //   alert('Please answer with \'yes\' or \'no\'');
 //   console.log('hair question user stated: ' + hair);
 // }
+//
+// //Question 6: number guessing game
+// var i = 0;
+// alert(user + ' can you guess my favorite Number?');
+// while (i < 4) {
+//   var favNumber = prompt('Hint: pick a number between 1 and 20, I\'ll give you 4 tries to guess.');
+//   favNumber = parseInt(favNumber);
+//   if (favNumber === 13) {
+//     userPoints++;
+//     alert('You guessed it! Great job ' + user + '. You have ' + userPoints + ' points.');
 
-//Question 6: number guessing game
-var i = 0;
-alert(user + ' can you guess my favorite Number?');
-while (i < 4) {
-  var favNumber = prompt('Hint: pick a number between 1 and 20, I\'ll give you 4 tries to guess.');
-  favNumber = parseInt(favNumber);
-  if (favNumber === 13) {
-    alert('You guessed it! Great job ' + user);
+//     i = 5;
+//   } else if (favNumber > 13) {
+//     alert('Sorry too high.');
+//     i++;
+//   } else {
+//     alert('Oops, too low.');
+//     i++;
+//   }
+//   if (i === 4 && favNumber !== 13) {
+//     alert('Better luck next time ' + user + '.');
+//   }
+// }
+// console.log(favNumber);
+
+//
+////Question 7:
+var forFun = ['Hike', 'Disc Sports', 'Snowboard', 'Woodwork', 'Coffee', 'Food', 'Seahawks', 'Beer'];
+var userAnswers = 5;
+
+var answer = prompt(user + ' can you guess something I like or do for fun? I will give you 6 trys.');
+for(var i = 0; i < 5; i++) {
+  if (answer === forFun[i]) {
     userPoints++;
-    i = 5;
-  } else if (favNumber > 13) {
-    alert('Sorry too high.');
-    i++;
+    alert('Great guess! You have ' + userPoints);
+    console.log(answer);
+    userAnswers = 7;
   } else {
-    alert('Oops, too low.');
-    i++;
-  }
-  if (i === 4 && favNumber !== 13) {
-    alert('Better luck next time ' + user + '.');
+    prompt('Sorry, try again, you have ' + userAnswers + ' remaining');
+    console.log(answer);
+    userAnswers--;
   }
 }
-console.log(favNumber);
-
+//
 // alert('Thanks for playing ' + user + '. You have ' + userPoints + ' total points. Hope you learned something about me.');
